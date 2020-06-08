@@ -1,0 +1,33 @@
+body {
+    background-color: #39393A;
+    color: #FDCA40;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+}
+
+h1, h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: 38px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input[type=text] {
+    width: 250px;
+    border: none;
+}
+
+input[type=submit] {
+    background-color: #FDCA40;
+    color: #39393A;
+    border: none;
+    font-size: 18px;
+}
+
+input[type=submit]:hover {
+    background-color: #AEDD92;
+    cursor: pointer;
+}
