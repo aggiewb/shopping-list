@@ -1,11 +1,12 @@
+var ulElement = document.querySelector('ul');
+
 function addListItems(event){
     var form = event.target;
     var items = form.querySelector('#items').value.split(',');
-    var ulElement = document.querySelector('ul');
 
     if(items[0].length > 0){
         document.querySelector('#user-warning').textContent = "";
-        for(var i = 0; i < items.length; i++){
+        for(var i = 0; (i < items.length) && (items[i].length > 0) && (items[i] !== ' '); i++){
             var imgElement = createXImgElement();
             var liElement = document.createElement('li');
             liElement.textContent = items[i];
@@ -15,7 +16,6 @@ function addListItems(event){
     } else {
         document.querySelector('#user-warning').textContent = "Please enter an item.";
     }
-
     event.preventDefault();
     form.reset();
 }
@@ -31,8 +31,14 @@ function createXImgElement(){
 function removeListItem(event){
     var imgElement = event.target;
     var liElement = imgElement.parentNode;
-    var ulElement = liElement.parentNode;
     ulElement.removeChild(liElement);
 }
 
+function clearList(){
+    while(ulElement.hasChildNodes()){
+        ulElement.removeChild(ulElement.firstChild);
+    }
+}
+
 document.querySelector('form').addEventListener('submit', addListItems);
+document.querySelector('button').addEventListener('click', clearList);
