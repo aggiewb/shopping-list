@@ -1,6 +1,6 @@
 body {
     background-color: #39393A;
-    color: #FDCA40;
+    color: #C5DECD;
     font-family: 'Open Sans', sans-serif;
     font-size: 28px;
 }
@@ -8,6 +8,10 @@ body {
 h1, h2 {
     font-family: 'Jost', sans-serif;
     font-size: 38px;
+}
+
+p {
+    color: #FDCA40;
 }
 
 li {
@@ -30,13 +34,13 @@ input[type=text] {
 }
 
 input[type=submit] {
-    background-color: #FDCA40;
+    background-color: #C5DECD;
     color: #39393A;
     border: none;
     font-size: 18px;
 }
 
 input[type=submit]:hover {
-    background-color: #AEDD92;
+    background-color: #FFFFFF;
     cursor: pointer;
 }
