@@ -3,16 +3,17 @@ function addListItems(event){
     var items = form.querySelector('#items').value.split(',');
     var ulElement = document.querySelector('ul');
 
-    if(items[0].length === 0){
-        return;
-    }
-    
-    for(var i = 0; i < items.length; i++){
-        var imgElement = createXImgElement();
-        var liElement = document.createElement('li');
-        liElement.textContent = items[i];
-        liElement.appendChild(imgElement);
-        ulElement.appendChild(liElement);
+    if(items[0].length > 0){
+        document.querySelector('#user-warning').textContent = "";
+        for(var i = 0; i < items.length; i++){
+            var imgElement = createXImgElement();
+            var liElement = document.createElement('li');
+            liElement.textContent = items[i];
+            liElement.appendChild(imgElement);
+            ulElement.appendChild(liElement);
+        }
+    } else {
+        document.querySelector('#user-warning').textContent = "Please enter an item.";
     }
 
     event.preventDefault();
