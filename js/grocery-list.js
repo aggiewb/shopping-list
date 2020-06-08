@@ -1,8 +1,11 @@
 function addListItems(event){
-    event.preventDefault();
     var form = event.target;
     var items = form.querySelector('#items').value.split(',');
     var ulElement = document.querySelector('ul');
+
+    if(items[0].length === 0){
+        return;
+    }
     
     for(var i = 0; i < items.length; i++){
         var imgElement = createXImgElement();
@@ -11,6 +14,9 @@ function addListItems(event){
         liElement.appendChild(imgElement);
         ulElement.appendChild(liElement);
     }
+
+    event.preventDefault();
+    form.reset();
 }
 
 function createXImgElement(){
