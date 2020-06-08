@@ -10,6 +10,15 @@ h1, h2 {
     font-size: 38px;
 }
 
+li {
+    list-style-type: square;
+    color: #AEDD92;
+}
+
+img {
+    margin-left: 5px;
+}
+
 input {
     padding: 10px;
     border-radius: 5px;
