@@ -33,14 +33,21 @@ input[type=text] {
     border: none;
 }
 
-input[type=submit] {
-    background-color: #C5DECD;
+input[type=submit], button {
     color: #39393A;
     border: none;
     font-size: 18px;
 }
 
-input[type=submit]:hover {
+input[type=submit] {
+    background-color: #C5DECD;
+}
+
+button {
+    background-color: #FDCA40;
+}
+
+input[type=submit]:hover, button:hover {
     background-color: #FFFFFF;
     cursor: pointer;
 }
