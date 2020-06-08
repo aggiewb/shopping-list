@@ -7,11 +7,7 @@ function addListItems(event){
     if(items[0].length > 0){
         document.querySelector('#user-warning').textContent = "";
         for(var i = 0; (i < items.length) && (items[i].length > 0) && (items[i] !== ' '); i++){
-            var imgElement = createXImgElement();
-            var liElement = document.createElement('li');
-            liElement.textContent = items[i];
-            liElement.appendChild(imgElement);
-            ulElement.appendChild(liElement);
+            createLiElementAppendToUl(createXImgElement(), items[i]);
         }
     } else {
         document.querySelector('#user-warning').textContent = "Please enter an item.";
@@ -26,6 +22,13 @@ function createXImgElement(){
     imgElement.setAttribute('alt', 'A red x to indicate removal.');
     imgElement.addEventListener('click', removeListItem);
     return imgElement;
+}
+
+function createLiElementAppendToUl(imgElement, item){
+    var liElement = document.createElement('li');
+    liElement.textContent = item;
+    liElement.appendChild(imgElement);
+    ulElement.appendChild(liElement);
 }
 
 function removeListItem(event){
