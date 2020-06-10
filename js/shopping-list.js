@@ -4,11 +4,13 @@
 
     function addListItems(event){
         var form = event.target;
-        var items = form.querySelector('#items').value.split(',');
+        var items = form.querySelector('#items').value.split(',').map(function(item){
+            return item.trim();
+        });
 
         if(items[0].length > 0){
             document.querySelector('#user-warning').textContent = "";
-            for(var i = 0; (i < items.length) && (items[i].length > 0) && (items[i] !== ' '); i++){
+            for(var i = 0; (i < items.length) && (items[i].length > 0); i++){
                 appendItemToList(createXImgElement(), items[i]);
             }
         } else {
