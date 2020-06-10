@@ -51,5 +51,5 @@
     document.querySelector("button").addEventListener("click", clearList);
 
     var date = new Date();
-    document.querySelector("footer").innerHTML = "Aggie Wheeler Bateman &copy; " +  date.getFullYear() + " <a href=\"https://www.aggiewheelerbateman.com\" target=\"_blank\">Personal Portfolio</a>";
+    document.querySelector("span[data-name=\"current-year\"").textContent = date.getFullYear();
 })();
