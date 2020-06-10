@@ -1,4 +1,4 @@
-var ulElement = document.querySelector('ul');
+var shoppingList = document.querySelector('ul');
 
 function addListItems(event){
     var form = event.target;
@@ -28,18 +28,18 @@ function appendItemToList(imgElement, item){
     var liElement = document.createElement('li');
     liElement.textContent = item;
     liElement.appendChild(imgElement);
-    ulElement.appendChild(liElement);
+    shoppingList.appendChild(liElement);
 }
 
 function removeListItem(event){
     var imgElement = event.target;
     var liElement = imgElement.parentNode;
-    ulElement.removeChild(liElement);
+    shoppingList.removeChild(liElement);
 }
 
 function clearList(){
-    while(ulElement.hasChildNodes()){
-        ulElement.removeChild(ulElement.firstChild);
+    while(shoppingList.hasChildNodes()){
+        shoppingList.removeChild(shoppingList.firstChild);
     }
 }
 
