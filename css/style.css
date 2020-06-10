@@ -1,6 +1,13 @@
+:root {
+    --highlight-text-color: #FDCA40;
+    --main-dark-color: #39393A;
+    --main-light-color: #C5DECD;
+    --hover-footer-change-color: #FFF;
+}
+
 body {
-    background-color: #39393A;
-    color: #C5DECD;
+    background-color: var(--main-dark-color);
+    color: var(--main-light-color);
     font-family: 'Open Sans', sans-serif;
     font-size: 28px;
 }
@@ -11,7 +18,7 @@ h1, h2 {
 }
 
 p {
-    color: #FDCA40;
+    color: var(--highlight-text-color);
 }
 
 li {
@@ -34,21 +41,21 @@ input[type=text] {
 }
 
 input[type=submit], button {
-    color: #39393A;
+    color: var(--main-dark-color);
     border: none;
     font-size: 18px;
 }
 
 input[type=submit] {
-    background-color: #C5DECD;
+    background-color: var(--main-light-color);
 }
 
 button {
-    background-color: #FDCA40;
+    background-color: var(--highlight-text-color);
 }
 
 input[type=submit]:hover, button:hover{
-    background-color: #FFFFFF;
+    background-color: var(--hover-footer-change-color);
     cursor: pointer;
 }
 
@@ -62,5 +69,5 @@ a {
 }
 
 a:hover {
-    color: #FFFFFF;
+    color: var(--hover-footer-change-color);
 }
