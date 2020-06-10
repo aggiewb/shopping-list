@@ -11,7 +11,7 @@
         if(items[0].length > 0){
             document.querySelector("#user-warning").textContent = "";
             for(var i = 0; (i < items.length) && (items[i].length > 0); i++){
-                appendItemToList(createXImgElement(), items[i]);
+                appendItemToList(items[i]);
             }
         } else {
             document.querySelector("#user-warning").textContent = "Please enter an item.";
@@ -28,10 +28,10 @@
         return imgElement;
     }
 
-    function appendItemToList(imgElement, item){
+    function appendItemToList(item){
         var liElement = document.createElement("li");
         liElement.textContent = item;
-        liElement.appendChild(imgElement);
+        liElement.appendChild(createXImgElement());
         shoppingList.appendChild(liElement);
     }
 
