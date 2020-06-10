@@ -23,7 +23,7 @@
     function createXImgElement(){
         var imgElement = document.createElement("img");
         imgElement.setAttribute("src", "media/x-icon.png");
-        imgElement.setAttribute("alt", "An X that can be clicked to remove this item from the list");
+        imgElement.setAttribute("alt", "A red X that can be clicked to remove this item from the list");
         imgElement.addEventListener("click", removeListItem);
         return imgElement;
     }
