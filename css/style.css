@@ -30,6 +30,10 @@ img {
     margin-left: 5px;
 }
 
+img:hover {
+    cursor: pointer;
+}
+
 input {
     padding: 10px;
     border-radius: 5px;
